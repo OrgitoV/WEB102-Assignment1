@@ -1,0 +1,61 @@
+.boroughs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 40vh;
+  min-height: 300px;
+}
+.borough-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  align-items: center;
+  width: 300px;
+  height: 30vh;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #d4d3d3;
+  color: #ffffff;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.borough-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.363);
+}
+
+.borough-card img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.button-container {
+  display: flex;
+  height: 10vh;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 0px; /* match .borough-card padding */
+  left: 10px;
+  width: calc(100% - 20px);  /* account for left/right padding */
+  height: calc(70% - 0px);   /* match image height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none; /* allows clicks to pass through */
+  text-align: center;
+}
+
+.overlay-text h2 {
+  -webkit-text-stroke: 1.5px black;
+  font-size: 2em;
+}
